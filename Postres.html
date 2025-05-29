@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous"> 
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <title>Inicio</title>
+    <style>
+      /* Fondo general naranja */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ebbd2a; /* Color naranja fuerte */
+}
+
+/* Sección del menú */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap; /* Permite que las tarjetas bajen en pantallas pequeñas */
+}
+/*h2*/
+.titulo-menu {
+    font-family: 'Impact';
+    font-size: 2.5rem;
+    color: #000000;
+    margin-bottom: 20px;
+    position: relative;
+    }
+
+.titulo-menu::after {
+  content: '';
+  width: 60px;
+  height: 4px;
+  background-color: #b11f1f;
+  display: block;
+  margin: 10px auto;
+  border-radius: 2px;
+}
+
+/* Tarjetas individuales */
+.menu-card {
+    background: #f5f5f5;
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    padding: 20px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.menu-card:hover {
+  transform: translateY(-5px);
+}
+/* Imágenes de cada producto */
+.menu-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Títulos de cada comida */
+.menu-card h2 {
+    margin: 10px 0 5px;
+    font-size: 20px;
+    color: #b11f1f;
+}
+
+/* Descripción debajo del título */
+.menu-card p {
+    font-size: 14px;
+    color: #333;
+}
+
+/* Precio en un círculo blanco */
+.price {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    color:#b11f1f;
+    padding: 10px;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* ----------------- RESPONSIVO ----------------- */
+
+/* Ajustes para pantallas pequeñas como celulares */
+@media (max-width: 700px) {
+    .menu {
+        flex-direction: column; /* Cambia de fila a columna */
+        align-items: center; /* Centra las tarjetas */
+    }
+
+    .menu-card {
+        width: 80%; /* Las tarjetas ocupan más ancho */
+        margin-bottom: 20px;
+    }
+}
+
+/*
+Este bloque @media detecta cuando la pantalla mide menos de 700px
+y cambia el diseño de las tarjetas de horizontal a vertical, 
+para que se vean apiladas una abajo de otra en celulares y tablets.
+*/
+    </style>
+</head>
+<body>
+    
+    <table class="header-img2" align="center" border="0">
+        <tr>
+            <th class="left-h" scope="col"><img src="ImgWeb/logo.png" alt=""></th>
+            <th class="right-h" scope="col"><img src="ImgWeb/chili.png" alt=""></th>
+        </tr>
+    </table>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b11f1f;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Inicio</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="Quien.html">Acerca de nosotros</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Menu
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown navbar-light" style="background-color: #b11f1f">
+                  <li><a class="dropdown-item" href="Des.html">Desayunos</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Comi.html">Comidas y cenas</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="Postres.html">Bebidas y postres</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="Horario.html">Horario de atencion</a>
+                </li>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Res.html">Reseñas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Galeri.html">Ubicación</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Contac.html">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <article>
+        <br>
+        <h2 class="titulo-menu">Bebidas</h2>
+    <section class="menu">
+    <div class="menu-card">
+        <img src="ImgWeb/refres.jpg">
+        <h2>Refrescos</h2>
+        <p>Variedad de refrescos de lata de 355 ml.</p>
+        <div class="price">c/u $ 39.00</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="ImgWeb/aguas.jpg">
+        <h2>Agua de Horchata</h2>
+        <p>Refrescante agua de horchata de arroz.</p>
+        <div class="price">$ 33.00</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="ImgWeb/aguas.jpg">
+        <h2>Agua de Jamaica</h2>
+        <p>Deliciosa agua fresca de flor de jamaica.</p>
+        <div class="price">$ 33.00</div>
+    </div>
+  
+    <div class="menu-card">
+      <img src="ImgWeb/tepr.jpg">
+      <h2>Té Helado de Poleo</h2>
+      <p>Delicioso té de poleo.</p>
+      <div class="price">$ 33.00</div>
+     </div>
+    </section>
+    <section class="menu">
+      <div class="menu-card">
+        <img src="ImgWeb/aguitas.jpg">
+        <h2>Maranguya</h2>
+        <p>Agua natural de mango con maracuya.</p>
+        <div class="price">$ 59.00</div>
+      </div>
+  
+      <div class="menu-card">
+        <img src="ImgWeb/aguitas.jpg">
+        <h2>Limonada Rosa</h2>
+        <p>Agua natural a base de jugo de limón y frutos rojos.</p>
+        <div class="price">$ 59.00</div>
+      </div>
+      
+      <div class="menu-card">
+        <img src="ImgWeb/horcha.jpg">
+        <h2>Horchata de Nieve de Tuna</h2>
+        <p>Agua de horchata de arroz con nieve de tuna.</p>
+        <div class="price">$ 74.00</div>
+      </div>
+
+      <div class="menu-card">
+        <img src="ImgWeb/horrom.jpg">
+        <h2>Horchata Rompope</h2>
+        <p>Horchata de arroz con nieve de rompope.</p>
+        <div class="price">$ 74.00</div>
+      </div>
+     </section> 
+     <section class="menu">
+      <div class="menu-card">
+        <img src="ImgWeb/cafesi.jpg">
+        <h2>Café de la Sierra</h2>
+        <p>Café de la sierra oaxaqueña, con canela y piloncillo.</p>
+        <div class="price">$ 38.00</div>
+      </div>
+      
+      <div class="menu-card">
+        <img src="ImgWeb/choco.jpg">
+        <h2>Chocolate de Leche</h2>
+        <p>Chocolate oaxaqueño elaborado con leche deslactosada.</p>
+        <div class="price">$ 66.00</div>
+      </div>
+  
+      <div class="menu-card">
+        <img src="ImgWeb/choco.jpg">
+        <h2>Chocolate de Agua</h2>
+        <p>Chocolate oaxaqueño elaborado con agua.</p>
+        <div class="price">$ 55.00</div>
+      </div>
+      
+      <div class="menu-card">
+        <img src="ImgWeb/ajon.jpg">
+        <h2>Ajontolito</h2>
+        <p>Atole con ajonjolí.</p>
+        <div class="price">$ 66.00</div>
+      </div>
+     </section> 
+     <h2 class="titulo-menu">Postres</h2>
+    <section class="menu">
+    <div class="menu-card">
+        <img src="ImgWeb/concha.jpg">
+        <h2>Conchita de Mantequilla de Vainilla</h2>
+        <p>Conchita elaborada artesanalmente , cubierta con una costra de vainilla.</p>
+        <div class="price">$ 42.00</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="ImgWeb/comida7.jpg">
+        <h2>Croissant de Almendras</h2>
+        <p>Croissant de masa danesa cubierto de almendras.</p>
+        <div class="price">$ 45.00</div>
+    </div>
+  
+    <div class="menu-card">
+        <img src="ImgWeb/comida8.jpg">
+        <h2>Torre de Panqueques</h2>
+        <p>Torre de hot cakes de la casa intercalado con molitito de plátano, relleno de queso filalphia, 
+          cubiertos de compota de frutos rojos
+          y salsa dulce de queso coronado con tocino supremo</p>
+        <div class="price">$ 45.00</div>
+    </div>
+  
+    <div class="menu-card">
+      <img src="ImgWeb/panque.jpg">
+      <h2>Pan de Elote</h2>
+      <p>Tradicional panqué de elote.</p>
+      <div class="price">$ 45.00</div>
+     </div>
+    </section>
+    <br>
+      </article>
+    <footer>
+      <p style="font-size: 20px; color: black;"> Siguenos en nuestras redes sociales!!!</p>
+      <a href="https://www.facebook.com/profile.php?id=61550585992105"> 
+          <img src="ImgWeb/facebook.png" width="35px" height="35px" border-radius="10px"
+          title="Facebook">
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=529514712439&text=%F0%9F%91%8B%20%C2%A1Hola!%20Este%20es%20un%20ejemplo%20de%20un%20mensaje"> 
+      <img src="ImgWeb/wa.png" width="35px" height="35px" border-radius="10px"
+      title="whatsapp">
+      </a>
+      <a href="https://www.instagram.com/chiliguajili/?hl=es"> 
+      <img src="ImgWeb/ig.png" width="40px" height="40px" border-radius="10px"
+      title="instagram">
+  </footer>
+</body>
+</html>

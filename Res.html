@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" 
+    crossorigin="anonymous"> 
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" 
+    crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Css/style.css">
+    <title>Inicio</title>
+    <style>
+      /* Fondo general */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: #ebbd2a;
+}
+/* Sección de testimonios */
+.testimonials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background: #ebbd2a; /* Color de fondo suave */
+}
+
+/* Contenedor del carrusel */
+.testimonial-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Cada testimonio */
+.testimonial {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* El testimonio activo se muestra */
+.testimonial.active {
+    display: flex;
+}
+
+/* Imagen del cliente */
+.testimonial img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Texto de la reseña */
+.testimonial p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Estrellas */
+.stars {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+/* Nombre del cliente */
+.testimonial h3 {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Ocupación o cargo */
+.testimonial small {
+    color: #777;
+}
+
+/* Botones de navegación (flechas) */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: orange;
+    color: white;
+    border: none;
+    font-size: 30px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    user-select: none;
+}
+
+/* Botón izquierdo */
+.prev {
+    left: -40px;
+}
+
+/* Botón derecho */
+.next {
+    right: -40px;
+}
+
+/* ----------------- RESPONSIVO ----------------- */
+
+/* Ajustes para pantallas pequeñas (celulares) */
+@media (max-width: 768px) {
+  .testimonial-container {
+      width: 80%;
+      padding: 10px;
+      max-width: 100%;
+      box-sizing: border-box;
+  }
+
+  .testimonial {
+      padding: 15px;
+  }
+
+  .testimonial img {
+      width: 80px;
+      height: 80px;
+  }
+
+  .prev, .next {
+      position: static;
+      display: inline-block;
+      margin: 10px 5px 0;
+      transform: none;
+      font-size: 24px;
+      padding: 8px;
+  }
+
+  .stars {
+      font-size: 18px;
+  }
+
+  .testimonial h3 {
+      font-size: 16px;
+  }
+
+  .testimonial p {
+      font-size: 14px;
+  }
+
+  .testimonials {
+      flex-direction: column;
+      height: auto;
+      padding: 20px 0;
+  }
+
+  table {
+      width: 100%;
+  }
+
+  th, td {
+      padding: 0;
+  }
+
+  * {
+      box-sizing: border-box;
+  }
+}
+
+/*
+Este bloque @media detecta pantallas menores a 600px
+y ajusta tamaños de imagen, botones y contenedor
+para que el carrusel se vea perfecto en celulares.
+*/
+  </style>
+</head>
+<body>
+    
+    <table class="header-img2" align="center" border="0">
+        <tr>
+            <th class="left-h" scope="col"><img src="ImgWeb/logo.png" alt=""></th>
+            <th class="right-h" scope="col"><img src="ImgWeb/chili.png" alt=""></th>
+        </tr>
+    </table>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #b11f1f;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Inicio</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Quien.html">Acerca de nosotros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown navbar-light" style="background-color: #b11f1f">
+                <li><a class="dropdown-item" href="Des.html">Desayunos</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Comi.html">Comidas y cenas</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="Postres.html">Bebidas y postres</a></li>
+                <li><hr class="dropdown-divider"></li>
+              </ul>
+              <li class="nav-item">
+                <a class="nav-link" href="Horario.html">Horario de atencion</a>
+              </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Res.html">Reseñas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Galeri.html">Ubicación</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Contac.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <article>
+      <br>
+      <br>
+      <section class="testimonials">
+        <div class="testimonial-container">
+            
+            <!-- Testimonio 1 -->
+            <div class="testimonial active">
+                <img src="ImgWeb/usu.jpg" alt="Cliente 1">
+                <p>"Como todas sus sucursales, 
+                  ninguna defrauda. El tiempo de espera fue mínimo, 
+                  y en cuanto a sabor es la misma calidad que hay en todos los Chili. 
+                  Únicamente que por la hora no contaban con cosas como café de olla o variedad de pan. 
+                  La atención que brindan siempre es agradable y se agradece"</p>
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <h3>Daniel Bohórquez</h3>
+                <small>Local Guide</small>
+            </div>
+    
+            <!-- Testimonio 2 -->
+            <div class="testimonial">
+                <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+                <p>"Lugar familiar y area para niños ; 
+                  Estacionamiento pequeño para 4 vehículos y uno para discapacidad"</p>
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <h3>Armando Reyes</h3>
+                <small>Local Guide</small>
+            </div>
+
+            <!-- Testimonio 3 -->
+            <div class="testimonial">
+              <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+              <p>"No hay duda de el sabor de la comida en esta sucursal muy bien y como en todos la amabilidad del personal"</p>
+              <div class="stars">
+                  ★★★★★
+              </div>
+              <h3>Alejandro Ramos</h3>
+              <small>Local Guide</small>
+            </div>
+
+            <!-- Testimonio 4 -->
+            <div class="testimonial">
+              <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+              <p>"Llegué muy temprano y ya estaban listos para recibir gente,
+                 la atención muy buena del personal, 
+                 el desayuno que yo pedí muy rico, los costos super bien y el lugar lindísimo, 
+                 claro que lo recomiendo y regresaré"</p>
+              <div class="stars">
+                  ★★★★★
+              </div>
+              <h3>Monica Hernandez</h3>
+              <small>Local Guide</small>
+          </div>
+
+            <!-- Testimonio 5 -->
+            <div class="testimonial">
+              <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+              <p>"El lugar es amplio y con buenas instalaciones,
+                 tienen muchos contactos por lo que es ideal para tomar algo comer y trabajar. 
+                 Tiene muy buen ambiente. Las porciones son buenas, los precios son razonables al servicio y alimentos. 
+                 Tiene regio de café ya sea americano o de Olla."</p>
+              <div class="stars">
+                  ★★★★
+              </div>
+              <h3>Daniel Alderete</h3>
+              <small>Local Guide</small>
+          </div>
+
+          <!-- Testimonio 6 -->
+            <div class="testimonial">
+              <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+              <p>"Muy rico como siempre! El concepto es bueno, 
+                pero muy sucio en general; en el área de juegos entran niños de todas las edades 
+                los juegos se nota que nunca los han limpiado, todo el cuarto despintado, 
+                la verdad que pena ! fue en cuanto al área de mesas tienen una estación de limpieza está bien, 
+                pero no puedes tener el cloro y botes vacíos de yogurt a la vista se ve mal.
+                Ojalá cuidaran esos detalles por que lo rico y el buen servicio dañan todo eso !"</p>
+              <div class="stars">
+                  ★
+              </div>
+              <h3>hola.magnoliaatelier</h3>
+              <small>Magnolia Atelier</small>
+          </div>
+
+          <!-- Testimonio 7 -->
+            <div class="testimonial">
+              <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+              <p>"Comida con aparienciencia buena...
+                me la sirvieron fria...tardan mucho..cafe frio...
+                Baños sucios...no habia roles ni Pan...Espero No volver.."</p>
+              <div class="stars">
+                  ★★
+              </div>
+              <h3>Rosa Maria Benitez Martinez</h3>
+              <small>Local Guide</small>
+          </div>
+
+          <!-- Testimonio 8 -->
+            <div class="testimonial">
+              <img src="ImgWeb/usu.jpg" alt="Cliente 2">
+              <p>"No me gusta. Que tengas q ordenar en caja. Los colaboradores. Ya no obtienen propina"</p>
+              <div class="stars">
+                  ★★★
+              </div>
+              <h3>Eloisa Garcia</h3>
+              <small>Local Guide Nivel 3</small>
+          </div>
+            <!-- Flechas para moverse -->
+            <button class="prev">&#10094;</button>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
+    <script src="Js/carrusel.js"></script>
+    <br>
+    <br>
+    <br>
+    </article>
+    <footer>
+      <p style="font-size: 20px; color: black;"> Siguenos en nuestras redes sociales!!!</p>
+      <a href="https://www.facebook.com/profile.php?id=61550585992105"> 
+          <img src="ImgWeb/facebook.png" width="35px" height="35px" border-radius="10px"
+          title="Facebook">
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=529514712439&text=%F0%9F%91%8B%20%C2%A1Hola!%20Este%20es%20un%20ejemplo%20de%20un%20mensaje"> 
+      <img src="ImgWeb/wa.png" width="35px" height="35px" border-radius="10px"
+      title="whatsapp">
+      </a>
+      <a href="https://www.instagram.com/chiliguajili/?hl=es"> 
+      <img src="ImgWeb/ig.png" width="40px" height="40px" border-radius="10px"
+      title="instagram">
+  </footer>
+</body>
+</html>
